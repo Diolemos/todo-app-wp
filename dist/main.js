@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){const e=document.createElement("div");e.classList.add("sidebar"),document.body.appendChild(e)}(),console.log("test from main"),console.log("test")})();
