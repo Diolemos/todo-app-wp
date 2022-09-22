@@ -1,4 +1,4 @@
-import app from './app'
+import loadApp from './website'
 
 
-app()
+loadApp()
