@@ -38,9 +38,22 @@ function createMain(){
     const main = document.createElement("main")
 
         //input: New todo 
-        //btn add todo
-        //list of todos 
+    const form = document.createElement("div")
+    form.classList.add("input-section")
 
+    const input = document.createElement("input")
+    input.setAttribute("type", "text")
+    input.setAttribute("placeholder", "..Walk the dog" )
+    input.classList.add("input")
+    form.appendChild(input)
+        //btn add todo
+    const button = document.createElement("button")
+    button.classList.add("btn")
+    button.textContent = "Add todo"
+
+        //list of todos 
+main.appendChild(form)
+main.appendChild(button)
     return main    
 }
 
