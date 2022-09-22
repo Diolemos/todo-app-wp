@@ -1,15 +1,28 @@
-//create hidden sidebar
-//sidebar will be hidden and activated by a menu btn
 //all todos will go into the default project and will have no priority, until edited by more curious users  
    //current project
     //add project btn
 
    
 
-
+//create hidden sidebar
+//sidebar will be hidden and activated by a menu btn
 function createSidebar(){
     const sidebar = document.createElement("sidebar")
     sidebar.classList.add("sidebar","hidden")
+
+    //project list
+    const listContainer = document.createElement("div")
+    const list = document.createElement("ul");
+    listContainer.appendChild(list)
+    const firstLi = document.createElement("li")
+    const listText = document.createElement("p")
+    listText.textContent = "Default Project"
+    firstLi.appendChild(listText)
+
+
+
+    //add project btn
+
 
     return sidebar
 }    
@@ -52,7 +65,7 @@ function createFooter() {
 
 
 //loadApp
-function loadApp(){
+export default function loadApp(){
     const body = document.body 
     body.appendChild(createSidebar())
     body.appendChild(createMain())
