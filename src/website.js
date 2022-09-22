@@ -12,7 +12,7 @@ function createSidebar(){
 
     //project list
     const listContainer = document.createElement("div")
-    listContainer.classList.add("listContainer")
+    listContainer.classList.add("ProjectListContainer")
     const list = document.createElement("ul");
     list.classList.add("projectList")
     listContainer.appendChild(list)
@@ -52,8 +52,20 @@ function createMain(){
     button.textContent = "Add todo"
 
         //list of todos 
+        const listContainer = document.createElement("div")
+        listContainer.classList.add("todoListContainer")
+        const list = document.createElement("ul");
+        list.classList.add("todoList")
+        listContainer.appendChild(list)
+        const firstLi = document.createElement("li")
+        const listText = document.createElement("p")
+        listText.textContent = "Default todo"
+        firstLi.appendChild(listText)
+        list.appendChild(firstLi)
+
 main.appendChild(form)
 main.appendChild(button)
+main.appendChild(listContainer)
     return main    
 }
 
