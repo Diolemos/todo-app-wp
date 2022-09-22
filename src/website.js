@@ -1,3 +1,5 @@
+
+
 //all todos will go into the default project and will have no priority, until edited by more curious users  
    //current project
     //add project btn
