@@ -12,13 +12,18 @@ function createSidebar(){
 
     //project list
     const listContainer = document.createElement("div")
+    listContainer.classList.add("listContainer")
     const list = document.createElement("ul");
+    list.classList.add("projectList")
     listContainer.appendChild(list)
+    
+    //placeholder code to be replace by loadlist function
     const firstLi = document.createElement("li")
     const listText = document.createElement("p")
     listText.textContent = "Default Project"
     firstLi.appendChild(listText)
-
+    list.appendChild(firstLi)
+    sidebar.appendChild(listContainer)
 
 
     //add project btn
