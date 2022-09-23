@@ -10,7 +10,7 @@
 //sidebar will be hidden and activated by a menu btn
 function createSidebar(){
     const sidebar = document.createElement("sidebar")
-    sidebar.classList.add("sidebar","hidden")
+    sidebar.id ="sidebar"
 
     //project list
     const listContainer = document.createElement("div")
@@ -27,6 +27,12 @@ function createSidebar(){
     list.appendChild(firstLi)
     sidebar.appendChild(listContainer)
 
+    //close btn
+    const closeBtn = document.createElement("button")
+    closeBtn.id = "closeBtn"
+    closeBtn.textContent = "x"
+
+    sidebar.appendChild(closeBtn)
 
     //add project btn
 
@@ -37,6 +43,8 @@ function createSidebar(){
 //create <main>
     
 function createMain(){
+
+    
     const main = document.createElement("main")
 
         //input: New todo 
@@ -65,6 +73,11 @@ function createMain(){
         firstLi.appendChild(listText)
         list.appendChild(firstLi)
 
+        // menubtn
+        const menuBtn = document.createElement("button")
+        menuBtn.classList.add("openBtn")
+
+main.appendChild(menuBtn)        
 main.appendChild(form)
 main.appendChild(button)
 main.appendChild(listContainer)
